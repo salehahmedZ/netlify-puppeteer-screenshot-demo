@@ -23,7 +23,7 @@ exports.handler = async (event, context) => {
     const screenshot = await page.screenshot({ 
         encoding: 'base64',
         type: 'jpeg',
-        quality: '50',
+        quality: 50,
     });
 
     await browser.close();
