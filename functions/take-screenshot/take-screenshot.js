@@ -18,7 +18,7 @@ exports.handler = async (event, context) => {
     
     const page = await browser.newPage();
 
-    await page.goto(pageToScreenshot, { waitUntil: 'networkidle1' });
+    await page.goto(pageToScreenshot, { waitUntil: 'networkidle0' });
 
     const screenshot = await page.screenshot({ 
         encoding: 'base64',
